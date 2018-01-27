@@ -5,6 +5,7 @@ Some set of methods ...
 - `jsHelper.co.addZeroPrefix(value, order)`
 - `jsHelper.co.countSubString(subString, string)`
 - `jsHelper.co.filterArrayOnUniqueValues(array)`
+- `jsHelper.co.fizzBuzz(limit)`
 - `jsHelper.co.getDaysInMonth(month, year)`
 - `jsHelper.co.getFactorial(n)`
 - `jsHelper.co.getMaxNumberInArray(array)`
