@@ -28,6 +28,7 @@ jsHelper.co.addZeroPrefix = function (value, order) {
   if (value < orderValue) {
     times = ('' + orderValue).length - ('' + value).length;
   }
+  // noinspection JSValidateTypes
   return '0'.repeat(times) + value;
 };
 
@@ -52,6 +53,26 @@ jsHelper.co.filterArrayOnUniqueValues = function (array) {
       return self.indexOf(item) === position;
     }
   );
+};
+
+/**
+ * @param {Number|String} limit
+ * @see https://repl.it/@w3lifer/fizz-buzz
+ */
+jsHelper.co.fizzBuzz = function (limit) {
+  for (var i = 1; i <= limit; i++) {
+    if (i % 3 === 0) {
+      if (i % 5 === 0) {
+        console.log('FizzBuzz');
+      } else {
+        console.log('Fizz');
+      }
+    } else if (i % 5 === 0) {
+      console.log('Buzz');
+    } else {
+      console.log(i);
+    }
+  }
 };
 
 /**

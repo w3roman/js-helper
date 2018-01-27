@@ -63,6 +63,12 @@
 
         // ---------------------------------------------------------------------
 
+        printHeader('fizzBuzz(limit)');
+
+        // ...
+
+        // ---------------------------------------------------------------------
+
         printHeader('getDaysInMonth(month, year)');
 
         assertEquals(31, jsHelper.co.getDaysInMonth(1, 1970));
@@ -159,39 +165,10 @@
         assertEquals(false, jsHelper.co.min(1, 2) === 2);
         assertEquals(true, jsHelper.co.min(1, 2) === 1);
 
-        // ---------------------------------------------------------------------
-
-// console.log(lib.itIsUniqueArray([0, 1, 2, 3]) === true);
-// console.log(lib.itIsUniqueArray([0, 1, 3, 2, 3]) === false);
-// console.log(lib.itIsUniqueArray(['zero', 'one', 'two', 'three']) === true);
-// console.log(
-//     lib.itIsUniqueArray(['zero', 'one', 'three', 'two', 'three']) === false
-// );
-
-// console.log(lib.sum(0, 0) === 0);
-// console.log(lib.sum(0, 1) === 1);
-// console.log(lib.sum(0, -1) === -1);
-// console.log(lib.sum(-1, -2) === -3);
-
-// console.log(lib.min(0, 0) === 0);
-// console.log(lib.min(0, 1) === 0);
-// console.log(lib.min(0, -1) === -1);
-// console.log(lib.min(-1, -2) === -2);
-
-
-
-// console.log(lib.max(0, 0) === 0);
-// console.log(lib.max(0, 1) === 1);
-// console.log(lib.max(0, -1) === 0);
-// console.log(lib.max(-1, -2) === -1);
-
       });
     </script>
-    <style>
-
-    </style>
 </head>
 <body>
-    <h1>Test.CO</h1>
+    <h1>Test</h1>
 </body>
 </html>
