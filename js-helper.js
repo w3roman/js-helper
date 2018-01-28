@@ -1,16 +1,11 @@
-;'use strict';
-
-// -----------------------------------------------------------------------------
 
 var jsHelper = {
-  constants: {},
+  constants: {
+    CSS_PREFIX: 'w3lifer--js-helper--'
+  },
   co: {},
   ui: {}
 };
-
-// -----------------------------------------------------------------------------
-
-jsHelper.constants.CSS_PREFIX = 'w3lifer__js-helper__';
 
 // -----------------------------------------------------------------------------
 
@@ -277,6 +272,56 @@ jsHelper.ui.googleUrlShortener = function (options) {
   );
   xhr.addEventListener('error', options.onError.bind(null, xhr));
   xhr.send(JSON.stringify({'longUrl': options.longUrl}));
+};
+
+/**
+ * @param {Object} options
+ * @param {Object} options.from HTMLElement
+ * @param {Object} options.to   HTMLElement
+ */
+jsHelper.ui.htmlHeadersMap = function (options) {
+
+  // Get
+
+  var headers = [];
+  for (var i = 1; i <= 6; i++) {
+    var headersOnPage = options.from.querySelectorAll('h' + i);
+    for (var j = 0; j < headersOnPage.length; j++) {
+      headers.push(headersOnPage[j]);
+    }
+  }
+
+  // Sort
+
+  var sortedHeaders = {};
+  headers.forEach(function (header) {
+    sortedHeaders[
+      Math.round(header.getBoundingClientRect().top + pageYOffset)
+    ] = header;
+  });
+  headers = sortedHeaders;
+
+  // Wrap
+
+  var nav = document.createElement('nav');
+  nav.classList.add(jsHelper.constants.CSS_PREFIX + 'html-headers-map');
+
+  // Generate markup
+
+  for (var header in headers) {
+    var item = document.createElement('div');
+    item.classList.add(
+      jsHelper.constants.CSS_PREFIX + 'html-headers-map--' +
+        headers[header].tagName.toLowerCase()
+    );
+    item.textContent = headers[header].textContent;
+    nav.appendChild(item);
+  }
+
+  // Add to
+
+  options.to.appendChild(nav);
+
 };
 
 /**
