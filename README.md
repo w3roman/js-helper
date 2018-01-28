@@ -19,6 +19,7 @@ Some set of methods ...
 - `jsHelper.ui.addScriptsToThePage(params)`
 - `jsHelper.ui.copyTextToClipboard(text)`
 - `jsHelper.ui.disableCodeReview()`
+- `jsHelper.ui.googleUrlShortener(options)`
 - `jsHelper.ui.iLoveValidator(textContent)`
 - `jsHelper.ui.onKeyCodeSequence(options)`
 
