@@ -239,6 +239,47 @@ jsHelper.ui.disableCodeReview = function () {
 };
 
 /**
+ * Google URL Shortener
+ * @param {Object}   options
+ * @param {String}   options.apiKey
+ * @param {String}   options.longUrl
+ * @param {Function} options.onError function (xhr) {}
+ * @param {Function} options.onLoad  function (xhr) {}
+ * @see https://goo.gl
+ * @see https://developers.google.com/url-shortener
+ */
+jsHelper.ui.googleUrlShortener = function (options) {
+  if (!options.apiKey) {
+    console.error('Google URL Shortener: You must specify API key');
+    return;
+  }
+  if (!options.longUrl) {
+    console.error('Google URL Shortener: You must specify URL');
+    return;
+  }
+  if (!options.onLoad) {
+    console.error('Google URL Shortener: You must specify "onLoad" callback');
+    return;
+  }
+  if (!options.onError) {
+    console.error('Google URL Shortener: You must specify "onError" callback');
+    return;
+  }
+  var xhr = new XMLHttpRequest();
+  xhr.open(
+    'post',
+    'https://www.googleapis.com/urlshortener/v1/url?key=' + options.apiKey
+  );
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.addEventListener(
+    'load',
+    options.onLoad.bind(null, xhr)
+  );
+  xhr.addEventListener('error', options.onError.bind(null, xhr));
+  xhr.send(JSON.stringify({'longUrl': options.longUrl}));
+};
+
+/**
  * @param {String} [textContent=</>]
  */
 jsHelper.ui.iLoveValidator = function (textContent) {
