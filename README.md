@@ -1,28 +1,21 @@
-# JS Helper
+# js-helper
 
 Some set of methods ...
 
-- `jsHelper.co.addZeroPrefix(value, order)`
-- `jsHelper.co.countSubString(subString, string)`
-- `jsHelper.co.filterArrayOnUniqueValues(array)`
-- `jsHelper.co.fizzBuzz(limit)`
-- `jsHelper.co.getDaysInMonth(month, year)`
-- `jsHelper.co.getFactorial(n)`
-- `jsHelper.co.getMaxNumberInArray(array)`
-- `jsHelper.co.getMinNumberInArray(array)`
-- `jsHelper.co.inArray(value, array)`
-- `jsHelper.co.isUniqueArray(array)`
-- `jsHelper.co.isValidDomainName(domainName)`
-- `jsHelper.co.isValidIp(ip)`
-- `jsHelper.co.max(a, b)`
-- `jsHelper.co.min(a, b)`
-- `jsHelper.ui.addScriptsToThePage(params)`
-- `jsHelper.ui.copyTextToClipboard(text)`
-- `jsHelper.ui.disableCodeReview()`
-- `jsHelper.ui.htmlHeadersMap(options)`
-- `jsHelper.ui.googleUrlShortener(options)`
-- `jsHelper.ui.iLoveValidator(textContent)`
-- `jsHelper.ui.onKeyCodeSequence(options)`
+- `jsHelper.addZeroPrefix(value, order)`
+- `jsHelper.countSubString(subString, string)`
+- `jsHelper.filterArrayOnUniqueValues(array)`
+- `jsHelper.fizzBuzz(limit)`
+- `jsHelper.getDaysInMonth(month, year)`
+- `jsHelper.getFactorial(n)`
+- `jsHelper.getMaxNumberInArray(array)`
+- `jsHelper.getMinNumberInArray(array)`
+- `jsHelper.inArray(value, array)`
+- `jsHelper.isUniqueArray(array)`
+- `jsHelper.isValidDomainName(domainName)`
+- `jsHelper.isValidIp(ip)`
+- `jsHelper.max(a, b)`
+- `jsHelper.min(a, b)`
 
 ---
 
