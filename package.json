@@ -1,5 +1,6 @@
 {
   "name": "@w3lifer/js-helper",
   "license": "MIT",
+  "version": "3.0.0",
   "author": "Roman Grinyov <w3lifer@gmail.com>"
 }
