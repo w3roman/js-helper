@@ -1,5 +1,5 @@
 
-var jsHelper = {};
+const jsHelper = {}
 
 /**
  * Returns the passed value with a zero prefix, if the value is less than
@@ -161,3 +161,5 @@ jsHelper.max = function (a, b) {
 jsHelper.min = function (a, b) {
   return a < b ? a : b;
 };
+
+export default jsHelper

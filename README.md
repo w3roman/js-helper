@@ -1,6 +1,4 @@
-# js-helper
-
-Some set of methods ...
+# [js-helper](https://www.npmjs.com/package/@w3lifer/js-helper)
 
 - `jsHelper.addZeroPrefix(value, order)`
 - `jsHelper.countSubString(subString, string)`
